@@ -1,0 +1,15 @@
+1. After unzipping this project inside 'directshifts' folder.
+    1.1 Ensure latest node and npm are installed/available from inside the folder.
+    1.2 Run npm install.
+    1.3 Run npm start.
+    1.4 Navigate to "http://localhost:3000".
+
+App should open in the configured browser.
+
+2. A note about navigation:
+    2.1 Backward navigation only can be done with browser back button.
+
+3. A note about api limitations.
+    3.1 Apis are rate limited; Public access is extremely limited; authenticated access is better supported.
+    3.2 Add your Personal Access Token (PAT) for github to  '/src/config/github.js' for authenticated access. Where PAT is classic PAT and better give all read permissions otherwise apis might fail.
+    3.3 PAT can be kept blank too or removed from config. In that case you might hit rate limits way sooner.
