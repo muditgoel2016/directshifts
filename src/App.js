@@ -1,23 +1,21 @@
-import { Route, Routes, useLocation } from 'react-router-dom';
-import Dashboard from './components/Dashboard/Dashboard';
-import PRList from './components/PRList/PRList';
-import IssueList from './components/IssueList/IssueList';
-import PRDetails from './components/PRDetails/PRDetails';
-import IssueDetails from './components/IssueDetails/IssueDetails';
+import { Route, Routes } from 'react-router-dom';
+import DashboardPage from './pages/DashboardPage';
+import PullRequestListPage from './pages/PullRequestListPage';
+import IssueListPage from './pages/IssueListPage';
+import PullRequestDetailsPage from './pages/PullRequestDetailsPage';
+import IssueDetailsPage from './pages/IssueDetailsPage';
 
 function App() {
-  const location = useLocation();
-  const prRecord = location.state?.prRecord;
-  const issueRecord = location.state?.issueRecord;
-  return (
-    <Routes>
-      <Route path="/" element={<Dashboard />} />
-      <Route path="/pull-requests" element={<PRList />} />
-      <Route path="/pull-requests/:id" element={<PRDetails prRecord={prRecord}/>} />
-      <Route path="/issues" element={<IssueList />} />
-      <Route path="/issues/:id" element={<IssueDetails issueRecord={issueRecord}/>} />
-    </Routes>
-  );
+
+    return (
+        <Routes>
+            <Route path="/" element={<DashboardPage />} />
+            <Route path="/pull-request" element={<PullRequestListPage />} />
+            <Route path="/pull-request/:id" element={<PullRequestDetailsPage />} />
+            <Route path="/issue" element={<IssueListPage />} />
+            <Route path="/issue/:id" element={<IssueDetailsPage />} />
+        </Routes>
+    );
 }
 
 export default App;

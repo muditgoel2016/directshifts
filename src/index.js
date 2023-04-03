@@ -9,19 +9,19 @@ import './index.css';
 const root = createRoot(document.getElementById('root'));
 
 const theme = createTheme({
-  // Define your custom theme options here
+    // Define your custom theme options here
 });
 
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-    <StyledEngineProvider injectFirst>
-      <ThemeProvider theme={theme}>
-        <App />
-      </ThemeProvider>
-    </StyledEngineProvider>
-    </BrowserRouter>
-  </React.StrictMode>
+    <React.StrictMode>
+        <BrowserRouter>
+            <StyledEngineProvider injectFirst>
+                <ThemeProvider theme={theme}>
+                    <App />
+                </ThemeProvider>
+            </StyledEngineProvider>
+        </BrowserRouter>
+    </React.StrictMode>
 );
 
 reportWebVitals();

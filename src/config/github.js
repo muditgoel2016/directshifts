@@ -1,7 +1,7 @@
 const githubConfig = {
     REPO_OWNER: "facebook",
     REPO: "react",
-    PAT: "" //my personal access token
-  };
+    PAT: "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" //my personal access token
+};
 
-  export default githubConfig;
+export default githubConfig;
